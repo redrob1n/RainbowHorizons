@@ -21,10 +21,12 @@
 /* PIXEL INTERRUPT */
 ISR(PORTE_INT0_vect){
 	ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+		
 		spectrometer_read(); //	reads in the 16-bit pixel
+		image[pixel_count]  = (uint16_t) (pixel[0] << 8) | pixel[1];
 		if(++pixel_count >= 2048){ // once we've read an entire image, flip the flag
 			image_done = true;
-		}
+		}		
 	}
 }
 
@@ -65,6 +67,8 @@ void spectrometer_init(void){
 	spi_select_device(&SPIE, &spec_spi_conf);
 	spi_write_packet(&SPIE, buffer, 3);
 	spi_deselect_device(&SPIE, &spec_spi_conf);
+	pixel_count = 0;
+	image_done = false;
 }
 
 /* If FIFO_RST is brought high, the spectrometer will reset, allowing for a new image to be taken. */

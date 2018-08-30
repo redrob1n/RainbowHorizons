@@ -16,11 +16,11 @@ void spectrometer_read(void);
 
 struct spi_device spec_spi_conf;
 
-uint16_t pixel_arr[2048];
+uint16_t image[2048];
 uint8_t pixel[2];
-uint16_t pixel_count = 0;
+uint16_t pixel_count;
 
-int image_done = false;
+int image_done;
 
 
 #endif /* SPECTROMETER_H_ */
