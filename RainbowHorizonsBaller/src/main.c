@@ -4,7 +4,7 @@
 
 #include <asf.h>
 #include "usart_console.h"
-
+#include "spectrometer.h"
 static void system_initialize(void);
 
 int main (void)
@@ -16,7 +16,17 @@ int main (void)
 
 	for (;;)
 	{
+		if (image_done)		
+		{
+			spectrometer_reset();
+			for (uint16_t i = 0; i < 2048; i++)
+			{
+				printf("%u", image[i]);
+			}
+		}
+		
 		printf("Hello\r\n");
+		wdt_reset();		
 	}
 		
 }
@@ -37,6 +47,8 @@ static void system_initialize(void)
 	
 	printf("Console USART initialized...\r\n");
 	printf("System initialized...\r\n");
+	
+	spectrometer_init();
 	
 	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
 	
