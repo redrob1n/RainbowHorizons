@@ -8,6 +8,24 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               src/src/usart_console.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_clear_bss.o)
                               src/ASF/common/utils/stdio/read.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+                              src/src/drivers/pressure/pressure.o (__muldi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o) (__muldi3_6)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+                              src/src/drivers/pressure/pressure.o (__ashldi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+                              src/src/drivers/pressure/pressure.o (__ashrdi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+                              src/src/drivers/pressure/pressure.o (__adddi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+                              src/src/drivers/pressure/pressure.o (__adddi3_s8)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+                              src/src/drivers/pressure/pressure.o (__subdi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+                              src/src/drivers/pressure/pressure.o (__cmpdi2_s8)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o) (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(memcpy.o)
                               src/ASF/xmega/drivers/nvm/nvm.o (memcpy)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(fdevopen.o)
@@ -26,13 +44,19 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 Allocating common symbols
 Common symbol       size              file
 
+cal_pres_c5         0x2               src/src/drivers/pressure/pressure.o
+cal_pres_c3         0x2               src/src/drivers/pressure/pressure.o
+cal_pres_c1         0x2               src/src/drivers/pressure/pressure.o
 ptr_get             0x2               src/ASF/common/utils/stdio/read.o
 pixel_arr           0x1000            src/src/drivers/spectrometer/spectrometer.o
 __brkval            0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(malloc.o)
 ptr_put             0x2               src/ASF/common/utils/stdio/write.o
 pixel               0x2               src/src/drivers/spectrometer/spectrometer.o
+cal_pres_c4         0x2               src/src/drivers/pressure/pressure.o
 stdio_base          0x2               src/ASF/common/utils/stdio/write.o
+cal_pres_c2         0x2               src/src/drivers/pressure/pressure.o
 __flp               0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(malloc.o)
+cal_pres_c6         0x2               src/src/drivers/pressure/pressure.o
 __iob               0x6               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(iob.o)
 spec_spi_conf       0x1               src/src/drivers/spectrometer/spectrometer.o
 
@@ -158,6 +182,137 @@ Discarded input sections
  .debug_macro   0x00000000       0x69 src/ASF/xmega/drivers/usart/usart.o
  .debug_macro   0x00000000       0x31 src/ASF/xmega/drivers/usart/usart.o
  .debug_macro   0x00000000       0xe4 src/ASF/xmega/drivers/usart/usart.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .group         0x00000000        0x8 src/src/drivers/pressure/pressure.o
+ .text          0x00000000        0x0 src/src/drivers/pressure/pressure.o
+ .data          0x00000000        0x0 src/src/drivers/pressure/pressure.o
+ .bss           0x00000000        0x0 src/src/drivers/pressure/pressure.o
+ .text.__portable_avr_delay_cycles
+                0x00000000       0x16 src/src/drivers/pressure/pressure.o
+ .text.spi_select
+                0x00000000        0xc src/src/drivers/pressure/pressure.o
+ .text.spi_deselect
+                0x00000000        0xc src/src/drivers/pressure/pressure.o
+ .text.spi_read
+                0x00000000       0x16 src/src/drivers/pressure/pressure.o
+ .text.spi_write
+                0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .text.calibratePressure
+                0x00000000      0x12e src/src/drivers/pressure/pressure.o
+ .text.SPI_init
+                0x00000000       0x1c src/src/drivers/pressure/pressure.o
+ .text.getPressure
+                0x00000000      0x3ac src/src/drivers/pressure/pressure.o
+ .debug_info    0x00000000      0x879 src/src/drivers/pressure/pressure.o
+ .debug_abbrev  0x00000000      0x228 src/src/drivers/pressure/pressure.o
+ .debug_loc     0x00000000      0x2e9 src/src/drivers/pressure/pressure.o
+ .debug_aranges
+                0x00000000       0x58 src/src/drivers/pressure/pressure.o
+ .debug_ranges  0x00000000       0x48 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x2fd src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0xa8a src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x1c9 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x2fc src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x9e src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000     0x62da src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x9a src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0xf1 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x34 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x16 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x18 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x5e src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x16d src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x1c src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x35 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x66 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x6d7 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x96 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x17 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x250 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x76 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x16 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x6d9 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x175 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x40 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x69 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x31 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0xe4 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x34 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x2c3 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x64 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x2f src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x154 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x28 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x82 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x102 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x26 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x2e src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x58 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0xf2 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x3a src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/pressure/pressure.o
+ .debug_macro   0x00000000      0x160 src/src/drivers/pressure/pressure.o
+ .debug_line    0x00000000      0xad4 src/src/drivers/pressure/pressure.o
+ .debug_str     0x00000000    0x2bbc8 src/src/drivers/pressure/pressure.o
+ .comment       0x00000000       0x31 src/src/drivers/pressure/pressure.o
+ .debug_frame   0x00000000       0xf4 src/src/drivers/pressure/pressure.o
+ COMMON         0x00000000        0xc src/src/drivers/pressure/pressure.o
  .group         0x00000000        0x8 src/src/drivers/spectrometer/spectrometer.o
  .group         0x00000000        0x8 src/src/drivers/spectrometer/spectrometer.o
  .group         0x00000000        0x8 src/src/drivers/spectrometer/spectrometer.o
@@ -248,13 +403,24 @@ Discarded input sections
  .debug_macro   0x00000000       0x40 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0x31 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0xe4 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x34 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0x22 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000      0x2c3 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0x64 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0x2f src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000      0x154 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x28 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x22 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000       0x82 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00000000      0x102 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x26 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x2e src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x58 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0xf2 src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x3a src/src/drivers/spectrometer/spectrometer.o
+ .debug_macro   0x00000000       0x10 src/src/drivers/spectrometer/spectrometer.o
  .group         0x00000000        0x8 src/src/usart_console.o
  .group         0x00000000        0x8 src/src/usart_console.o
  .group         0x00000000        0x8 src/src/usart_console.o
@@ -1405,6 +1571,150 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.mul
+                0x00000000       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.mul
+                0x00000000       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_muldi3_6.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.builtins
+                0x00000000       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashldi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.builtins
+                0x00000000       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_ashrdi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc   0x00000000       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc   0x00000000       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_adddi3_s8.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc   0x00000000       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_subdi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc   0x00000000       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_cmpdi2_s8.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega6\libgcc.a(_umulhisi3.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(memcpy.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(memcpy.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega6\libc.a(memcpy.o)
@@ -1445,6 +1755,7 @@ Linker script and memory map
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/XMEGAA_DFP/1.1.68/gcc/dev/atxmega192a3u/avrxmega6/crtatxmega192a3u.o
 LOAD src/ASF/common/utils/stdio/read.o
 LOAD src/ASF/xmega/drivers/usart/usart.o
+LOAD src/src/drivers/pressure/pressure.o
 LOAD src/src/drivers/spectrometer/spectrometer.o
 LOAD src/src/usart_console.o
 LOAD src/ASF/common/utils/stdio/write.o
@@ -2146,7 +2457,7 @@ END GROUP
  .debug_ranges  0x000001a0       0x10 src/ASF/common/boards/user_board/init.o
  .debug_ranges  0x000001b0       0x10 src/main.o
 
-.debug_macro    0x00000000     0xaf41
+.debug_macro    0x00000000     0xaca9
  *(.debug_macro)
  .debug_macro   0x00000000      0x16d src/ASF/common/utils/stdio/read.o
  .debug_macro   0x0000016d      0xa8a src/ASF/common/utils/stdio/read.o
@@ -2192,25 +2503,14 @@ END GROUP
  .debug_macro   0x00009811      0x102 src/ASF/xmega/drivers/usart/usart.o
  .debug_macro   0x00009913      0x339 src/src/drivers/spectrometer/spectrometer.o
  .debug_macro   0x00009c4c       0x2e src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009c7a       0x34 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009cae       0x22 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009cd0       0x28 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009cf8       0x22 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009d1a       0x26 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009d40       0x2e src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009d6e       0x58 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009dc6       0x10 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009dd6       0xf2 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009ec8       0x3a src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009f02       0x10 src/src/drivers/spectrometer/spectrometer.o
- .debug_macro   0x00009f12      0x2f9 src/src/usart_console.o
- .debug_macro   0x0000a20b       0x28 src/src/usart_console.o
- .debug_macro   0x0000a233      0x16d src/ASF/common/utils/stdio/write.o
- .debug_macro   0x0000a3a0      0x230 src/ASF/common/services/spi/xmega_spi/spi_master.o
- .debug_macro   0x0000a5d0      0x1e6 src/ASF/common/services/clock/xmega/sysclk.o
- .debug_macro   0x0000a7b6      0x180 src/ASF/xmega/drivers/wdt/wdt.o
- .debug_macro   0x0000a936      0x2ea src/ASF/common/boards/user_board/init.o
- .debug_macro   0x0000ac20      0x2f3 src/main.o
- .debug_macro   0x0000af13       0x2e src/main.o
+ .debug_macro   0x00009c7a      0x2f9 src/src/usart_console.o
+ .debug_macro   0x00009f73       0x28 src/src/usart_console.o
+ .debug_macro   0x00009f9b      0x16d src/ASF/common/utils/stdio/write.o
+ .debug_macro   0x0000a108      0x230 src/ASF/common/services/spi/xmega_spi/spi_master.o
+ .debug_macro   0x0000a338      0x1e6 src/ASF/common/services/clock/xmega/sysclk.o
+ .debug_macro   0x0000a51e      0x180 src/ASF/xmega/drivers/wdt/wdt.o
+ .debug_macro   0x0000a69e      0x2ea src/ASF/common/boards/user_board/init.o
+ .debug_macro   0x0000a988      0x2f3 src/main.o
+ .debug_macro   0x0000ac7b       0x2e src/main.o
 OUTPUT(RainbowHorizonsBaller.elf elf32-avr)
 LOAD linker stubs

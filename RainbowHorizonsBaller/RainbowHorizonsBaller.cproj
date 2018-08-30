@@ -353,6 +353,7 @@
     <Folder Include="src\include" />
     <Folder Include="src\src" />
     <Folder Include="src\src\drivers" />
+    <Folder Include="src\src\drivers\pressure" />
     <Folder Include="src\src\drivers\spectrometer" />
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +364,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\include\usart_console.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\src\drivers\pressure\pressure.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\src\drivers\pressure\pressure.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\src\drivers\spectrometer\spectrometer.c">
