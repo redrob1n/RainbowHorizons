@@ -6,6 +6,10 @@ src\ASF\common\utils\stdio\read.c
 
 src\ASF\xmega\drivers\usart\usart.c
 
+src\src\drivers\pressure\pressure.c
+
+src\src\drivers\spectrometer\spectrometer.c
+
 src\src\usart_console.c
 
 src\ASF\common\utils\stdio\write.c
