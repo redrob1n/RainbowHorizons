@@ -9,6 +9,7 @@
 
 void console_init()
 {
+	sysclk_enable_peripheral_clock(USART_SERIAL);	//enable the USART's clock
 	//initialize a configuration struct with USART settings
 	static usart_serial_options_t usart_config = {
 		.baudrate	=	USART_SERIAL_BAUDRATE,
@@ -17,10 +18,10 @@ void console_init()
 		.stopbits	=	USART_SERIAL_STOP_BIT
 	};
 	
-	PORTC.DIR |= USART_TX_PIN;	//set the USART transmit pin to output
+	PORTD.DIR |= USART_TX_PIN;	//set the USART transmit pin to output
 	
 	stdio_serial_init(USART_SERIAL, &usart_config); //function maps the serial output to printf, not nessecary to know how it works
 	
-	sysclk_enable_peripheral_clock(USART_SERIAL);	//enable the USART's clock
+	
 	delay_us(1); //apparently need to slow down before print @32MHz
 }
