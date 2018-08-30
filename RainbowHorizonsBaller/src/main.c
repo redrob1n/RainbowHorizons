@@ -1,40 +1,49 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
-
-/**
- * \mainpage User Application template doxygen documentation
- *
- * \par Empty user application template
- *
- * Bare minimum empty user application template
- *
- * \par Content
- *
- * -# Include the ASF header files (through asf.h)
- * -# "Insert system clock initialization code here" comment
- * -# Minimal main function that starts with a call to board_init()
- * -# "Insert application code here" comment
- *
- */
-
 /*
- * Include header files for all drivers that have been imported from
- * Atmel Software Framework (ASF).
- */
-/*
- * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
- */
+* 
+*/
+
 #include <asf.h>
+#include "usart_console.h"
+
+static void system_initialize(void);
 
 int main (void)
-{
-	/* Insert system clock initialization code here (sysclk_init()). */
-
+{	
+	sysclk_init();
 	board_init();
 
-	/* Insert application code here, after the board has been initialized. */
+	system_initialize();
+
+	for (;;)
+	{
+		printf("Hello\r\n");
+	}
+		
+}
+
+static void system_initialize(void)
+{
+	wdt_set_timeout_period(WDT_TIMEOUT_PERIOD_8CLK);
+	wdt_enable();
+	
+	console_init(); //initialize usart for console
+	
+	//Only check for watchdog WARNING: only wdt reset cause will be reset
+	if (reset_cause_is_watchdog())
+	{
+		printf("WARNING: watchdog timer caused the cpu to be reset\r\n");
+		reset_cause_clear_causes(RESET_CAUSE_WDT);
+	}
+	
+	printf("Console USART initialized...\r\n");
+	printf("System initialized...\r\n");
+	
+	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
+	
+	
+	sei(); //set enable interrupts
+	
+	printf("Global interrupts enabled...\r\n");
+	
+	printf("Application begin...\r\n");
 }
