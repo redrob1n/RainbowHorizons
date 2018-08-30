@@ -4,7 +4,9 @@
 
 #include <asf.h>
 #include "usart_console.h"
-#include "spectrometer.h"
+#include "src/drivers/spectrometer/spectrometer.h"
+#include "src/drivers/pressure/pressure.h"
+
 static void system_initialize(void);
 
 int main (void)
@@ -19,13 +21,13 @@ int main (void)
 		if (image_done)		
 		{
 			spectrometer_reset();
+			printf("%li,", getPressure());
 			for (uint16_t i = 0; i < 2048; i++)
 			{
-				printf("%u", image[i]);
+				printf("%u,", image[i]);
 			}
+			printf("\n");
 		}
-		
-		printf("Hello\r\n");
 		wdt_reset();		
 	}
 		
@@ -45,8 +47,8 @@ static void system_initialize(void)
 		reset_cause_clear_causes(RESET_CAUSE_WDT);
 	}
 	
-	printf("Console USART initialized...\r\n");
-	printf("System initialized...\r\n");
+	//printf("Console USART initialized...\r\n");
+	//printf("System initialized...\r\n");
 	
 	spectrometer_init();
 	
@@ -55,7 +57,7 @@ static void system_initialize(void)
 	
 	sei(); //set enable interrupts
 	
-	printf("Global interrupts enabled...\r\n");
+	//printf("Global interrupts enabled...\r\n");
 	
-	printf("Application begin...\r\n");
+	//printf("Application begin...\r\n");
 }
