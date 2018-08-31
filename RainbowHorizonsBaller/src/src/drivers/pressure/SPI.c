@@ -39,7 +39,7 @@ void enable_select_pin(ioport_pin_t pin)
 
 void initializespi(SPI_t* targetspi, PORT_t* port)
 {
-	sysclk_enable_peripheral_clock(targetspi); //Enable peripheral clock for SPIC
+	sysclk_enable_peripheral_clock(targetspi); //Enable peripheral clock for SPIx
 
 	/*
 	*	Initialize pins
@@ -72,5 +72,5 @@ void initializespi(SPI_t* targetspi, PORT_t* port)
 	*
 	*/
 
-	targetspi->CTRL = 0b11010000;
+	targetspi->CTRL = 0b01010000;
 }

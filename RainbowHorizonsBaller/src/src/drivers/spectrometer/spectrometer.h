@@ -13,6 +13,7 @@
 void spectrometer_init(void);
 void spectrometer_reset(void);
 void spectrometer_read(void);
+void test_spec(void);
 
 struct spi_device spec_spi_conf;
 

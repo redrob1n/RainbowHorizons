@@ -14,8 +14,8 @@
 #define FIFO_RST PIN2_bm
 #define PIXEL_RDY PIN3_bm
 #define SPI_CS PIN4_bm
-#define MISO PIN5_bm
-#define MOSI PIN6_bm
+#define MOSI PIN5_bm
+#define MISO PIN6_bm
 #define SPI_CLK PIN7_bm
 
 /* PIXEL INTERRUPT */
@@ -40,10 +40,11 @@ void spectrometer_init(void){
 	PMIC.CTRL = PMIC_HILVLEN_bm | PMIC_LOLVLEN_bm; //Enable high level interrupts.
 	
 	/* Initialize SPI things */
+	sysclk_enable_peripheral_clock(&SPIE);
 	spec_spi_conf.id =  IOPORT_CREATE_PIN(PORTE, 3);
 	
 	ioport_configure_port_pin(&PORTE, FIFO_CS, IOPORT_INIT_HIGH | IOPORT_DIR_OUTPUT);
-	ioport_configure_port_pin(&PORTE, SPI_CS, IOPORT_PULL_UP | IOPORT_DIR_INPUT);
+	ioport_configure_port_pin(&PORTE, SPI_CS, IOPORT_INIT_HIGH | IOPORT_DIR_OUTPUT);
 	
 	ioport_configure_port_pin(&PORTE, MOSI, IOPORT_INIT_HIGH| IOPORT_DIR_OUTPUT);
 	ioport_configure_port_pin(&PORTE, MISO, IOPORT_DIR_INPUT);
@@ -69,6 +70,8 @@ void spectrometer_init(void){
 	spi_deselect_device(&SPIE, &spec_spi_conf);
 	pixel_count = 0;
 	image_done = false;
+	
+	spectrometer_reset();
 }
 
 /* If FIFO_RST is brought high, the spectrometer will reset, allowing for a new image to be taken. */
@@ -87,4 +90,20 @@ void spectrometer_read(void){
 	spi_deselect_device(&SPIE, &spec_spi_conf);
 	
 	ioport_set_pin_high(IOPORT_CREATE_PIN(PORTE, FIFO_CS));
+}
+
+void test_spec(void){
+	/* Ask for FPGA thing */
+	uint8_t buffer[2] = {0x18, 0};
+	spi_select_device(&SPIE, &spec_spi_conf);
+	spi_write_packet(&SPIE, buffer, 1);
+	spi_deselect_device(&SPIE, &spec_spi_conf);
+		
+	uint8_t int_time[2] = {0,0};
+	spi_select_device(&SPIE, &spec_spi_conf);
+	spi_read_packet(&SPIE, int_time, 2);
+	spi_deselect_device(&SPIE, &spec_spi_conf);
+		
+	printf("fpga: %u", int_time[0]);
+	printf("%u\n", int_time[1]);
 }
