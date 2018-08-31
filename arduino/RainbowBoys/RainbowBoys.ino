@@ -11,9 +11,13 @@
 #define SPEC_CHANNELS    288 // New Spec Channel
 uint16_t data[SPEC_CHANNELS];
 String current_pressure;
+uint16_t image_count = 0;
 
 void setup(){
   pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  digitalWrite(12, LOW);
+  
   //Set desired pins to OUTPUT
   pinMode(SPEC_CLK, OUTPUT);
   pinMode(SPEC_ST, OUTPUT);
@@ -109,20 +113,25 @@ void readSpectrometer(){
 void printData(){
   Serial.print(current_pressure);
   Serial.print(',');
+  Serial.print(++image_count);
+  Serial.print('\n');
   for (int i = 0; i < SPEC_CHANNELS; i++){
     
     Serial.print(data[i]);
     Serial.print(',');
      
   }
-  
   Serial.print("\n");
 }
 
 void readPressure(void){
   digitalWrite(13, HIGH);
+  //digitalWrite(LASER_404, HIGH);
+  
   delay(30);
   current_pressure = Serial.readString();
+  delay(10);
+  digitalWrite(13, LOW);
 }
 
 void loop(){
