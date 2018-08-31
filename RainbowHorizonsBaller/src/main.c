@@ -4,9 +4,13 @@
 
 #include <asf.h>
 #include "usart_console.h"
-#include "src/drivers/spectrometer/spectrometer.h"
-#include "src/drivers/pressure/pressure.h"
+#include "drivers/pressure/MS56XX.h"
+#include "drivers/pressure/SPI.h"
+#include "drivers/spectrometer/spectrometer.h"
 
+#define PRESSURE_SELECT_PIN		IOPORT_CREATE_PIN(PORTC, 4)
+
+MS56XX_t pressure_sensor;
 static void system_initialize(void);
 
 int main (void)
@@ -18,13 +22,11 @@ int main (void)
 
 	for (;;)
 	{
-		int32_t pressure = getPressure();
-		delay_ms(10);
-		printf("%li",getPressure());
 		if (image_done)		
 		{
 			spectrometer_reset();
-			printf("%li,", getPressure());
+			readMS56XX(&pressure_sensor);
+			printf("%li,", pressure_sensor.data.pressure);
 			for (uint16_t i = 0; i < 2048; i++)
 			{
 				printf("%u,", image[i]);
@@ -54,7 +56,13 @@ static void system_initialize(void)
 	//printf("System initialized...\r\n");
 	
 	//spectrometer_init();
-	SPI_init();
+	pressure_sensor = define_new_MS56XX_default_OSR(MS5607, &SPIC, PRESSURE_SELECT_PIN);
+	
+	initializespi(&SPIC, &PORTC);
+	enable_select_pin(pressure_sensor.select_pin);
+	
+	//Pressure sensor initialization routine, also reads calibration data from sensor
+	calibratePressureSensor(&pressure_sensor);
 	
 	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
 	

@@ -307,6 +307,7 @@
             <Value>../src/ASF/common/services/spi</Value>
             <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
             <Value>../src/ASF/xmega/drivers/usart</Value>
+            <Value>../src/src/drivers/spectrometer</Value>
           </ListValues>
         </avrgcc.assembler.general.IncludePaths>
         <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
@@ -366,10 +367,16 @@
     <Compile Include="src\include\usart_console.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\src\drivers\pressure\pressure.c">
+    <Compile Include="src\src\drivers\pressure\MS56XX.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\src\drivers\pressure\pressure.h">
+    <Compile Include="src\src\drivers\pressure\MS56XX.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\src\drivers\pressure\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\src\drivers\pressure\SPI.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\src\drivers\spectrometer\spectrometer.c">

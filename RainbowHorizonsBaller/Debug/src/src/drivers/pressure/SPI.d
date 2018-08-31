@@ -1,6 +1,7 @@
-src/src/drivers/pressure/pressure.d src/src/drivers/pressure/pressure.o: \
- ../src/src/drivers/pressure/pressure.c ../src/asf.h \
- ../src/ASF/xmega/drivers/cpu/ccp.h ../src/ASF/xmega/utils/compiler.h \
+src/src/drivers/pressure/SPI.d src/src/drivers/pressure/SPI.o: \
+ ../src/src/drivers/pressure/SPI.c ../src/src/drivers/pressure/SPI.h \
+ ../src/asf.h ../src/ASF/xmega/drivers/cpu/ccp.h \
+ ../src/ASF/xmega/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -56,9 +57,9 @@ src/src/drivers/pressure/pressure.d src/src/drivers/pressure/pressure.o: \
  ../src/ASF/common/services/serial/serial.h \
  ../src/ASF/common/services/serial/xmega_usart/usart_serial.h \
  ../src/ASF/xmega/drivers/usart/usart.h ../src/config/conf_usart_serial.h \
- ../src/ASF/xmega/drivers/wdt/wdt.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../src/src/drivers/pressure/pressure.h
+ ../src/ASF/xmega/drivers/wdt/wdt.h
+
+../src/src/drivers/pressure/SPI.h:
 
 ../src/asf.h:
 
@@ -189,7 +190,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 ../src/config/conf_usart_serial.h:
 
 ../src/ASF/xmega/drivers/wdt/wdt.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-../src/src/drivers/pressure/pressure.h:

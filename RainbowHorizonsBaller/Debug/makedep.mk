@@ -6,7 +6,9 @@ src\ASF\common\utils\stdio\read.c
 
 src\ASF\xmega\drivers\usart\usart.c
 
-src\src\drivers\pressure\pressure.c
+src\src\drivers\pressure\MS56XX.c
+
+src\src\drivers\pressure\SPI.c
 
 src\src\drivers\spectrometer\spectrometer.c
 

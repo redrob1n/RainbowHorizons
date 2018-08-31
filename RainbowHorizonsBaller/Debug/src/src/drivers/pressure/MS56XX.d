@@ -1,4 +1,6 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
+src/src/drivers/pressure/MS56XX.d src/src/drivers/pressure/MS56XX.o: \
+ ../src/src/drivers/pressure/MS56XX.c \
+ ../src/src/drivers/pressure/MS56XX.h ../src/asf.h \
  ../src/ASF/xmega/drivers/cpu/ccp.h ../src/ASF/xmega/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
@@ -55,10 +57,9 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/common/services/serial/serial.h \
  ../src/ASF/common/services/serial/xmega_usart/usart_serial.h \
  ../src/ASF/xmega/drivers/usart/usart.h ../src/config/conf_usart_serial.h \
- ../src/ASF/xmega/drivers/wdt/wdt.h ../src/include/usart_console.h \
- ../src/src/drivers/pressure/MS56XX.h ../src/src/drivers/pressure/SPI.h \
- ../src/src/drivers/pressure/SPI.h \
- ../src/src/drivers/spectrometer/spectrometer.h
+ ../src/ASF/xmega/drivers/wdt/wdt.h ../src/src/drivers/pressure/SPI.h
+
+../src/src/drivers/pressure/MS56XX.h:
 
 ../src/asf.h:
 
@@ -190,12 +191,4 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 
 ../src/ASF/xmega/drivers/wdt/wdt.h:
 
-../src/include/usart_console.h:
-
-../src/src/drivers/pressure/MS56XX.h:
-
 ../src/src/drivers/pressure/SPI.h:
-
-../src/src/drivers/pressure/SPI.h:
-
-../src/src/drivers/spectrometer/spectrometer.h:

@@ -12,13 +12,13 @@
 
 #include <asf.h>
 
-#define USART_SERIAL			&USARTF0
-#define USART_SERIAL_BAUDRATE	115200
+#define USART_SERIAL			&USARTD1
+#define USART_SERIAL_BAUDRATE	9600
 #define USART_SERIAL_CHAR_LEN	USART_CHSIZE_8BIT_gc
 #define USART_SERIAL_PARITY		USART_PMODE_DISABLED_gc
 #define USART_SERIAL_STOP_BIT	false
 
-#define USART_TX_PIN			0x08
+#define USART_TX_PIN			PIN7_bm
 
 void console_init(void);
 
