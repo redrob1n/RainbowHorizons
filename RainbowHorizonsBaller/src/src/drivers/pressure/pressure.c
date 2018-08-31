@@ -23,6 +23,7 @@
 
  /* Configuring SPI module.*/
  void SPI_init(void){
+	 sysclk_enable_peripheral_clock(&SPIC);
 	 //printf("spi_init\n");
 	 PORTC.DIR |= 0b10110000; //Set port to input.
 	 PORTC.DIR &= 0b10111111;

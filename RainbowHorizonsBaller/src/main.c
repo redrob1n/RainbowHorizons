@@ -18,6 +18,9 @@ int main (void)
 
 	for (;;)
 	{
+		int32_t pressure = getPressure();
+		delay_ms(10);
+		printf("%li",getPressure());
 		if (image_done)		
 		{
 			spectrometer_reset();
@@ -50,7 +53,8 @@ static void system_initialize(void)
 	//printf("Console USART initialized...\r\n");
 	//printf("System initialized...\r\n");
 	
-	spectrometer_init();
+	//spectrometer_init();
+	SPI_init();
 	
 	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
 	
@@ -59,5 +63,5 @@ static void system_initialize(void)
 	
 	//printf("Global interrupts enabled...\r\n");
 	
-	//printf("Application begin...\r\n");
+	printf("Application begin...\r\n");
 }
