@@ -22,25 +22,28 @@ int main (void)
 
 	for (;;)
 	{
+		
 		if (image_done)		
 		{
-			spectrometer_reset();
 			readMS56XX(&pressure_sensor);
 			printf("%li,", pressure_sensor.data.pressure);
+			spectrometer_reset();
+			
 			for (uint16_t i = 0; i < 2048; i++)
 			{
 				printf("%u,", image[i]);
 			}
 			printf("\n");
 		}
-		wdt_reset();		
+		wdt_reset();
+		delay_ms(250);
 	}
 		
 }
 
 static void system_initialize(void)
 {
-	wdt_set_timeout_period(WDT_TIMEOUT_PERIOD_8CLK);
+	wdt_set_timeout_period(WDT_TIMEOUT_PERIOD_8KCLK);
 	wdt_enable();
 	
 	console_init(); //initialize usart for console
@@ -52,8 +55,8 @@ static void system_initialize(void)
 		reset_cause_clear_causes(RESET_CAUSE_WDT);
 	}
 	
-	//printf("Console USART initialized...\r\n");
-	//printf("System initialized...\r\n");
+	printf("Console USART initialized...\r\n");
+	printf("System initialized...\r\n");
 	
 	//spectrometer_init();
 	pressure_sensor = define_new_MS56XX_default_OSR(MS5607, &SPIC, PRESSURE_SELECT_PIN);
@@ -64,12 +67,14 @@ static void system_initialize(void)
 	//Pressure sensor initialization routine, also reads calibration data from sensor
 	calibratePressureSensor(&pressure_sensor);
 	
+	spectrometer_init();
+	
 	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
 	
 	
 	sei(); //set enable interrupts
 	
-	//printf("Global interrupts enabled...\r\n");
+	printf("Global interrupts enabled...\r\n");
 	
 	printf("Application begin...\r\n");
 }
